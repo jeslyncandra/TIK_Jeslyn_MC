@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    /*
+    Jika nilai >= 0,3 nilai tugas
+    Jika nilai >= 0,3 nilai UTS
+    Jika nilai >= 0,3 nilai UAS
+    */
+    int nilai;
+    cout<<"masukkan nilai tugas = "; cin>>nilai;
+    cout<<"masukkan nilai UTS = "; cin>>nilai;
+    cout<<"masukkan nilai UAS = "; cin>>nilai;
+    if (nilai > 100){
+        cout<<"nilai tidak boleh melebihi 100";
+    }
+    else if (nilai >= 0,3){
+        cout<<"nilai tugas";
+    }
+    else if (nilai >= 0,3){
+        cout<<"niali UTS";
+    }
+    else if (nilai >= 0,4){
+        cout<<"niali UAS";
+    }
+
+}
