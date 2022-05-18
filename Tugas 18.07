@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+
+
+main(){
+ float rupiah, dollar; int pilih;
+  cout<<"=============================================="<<endl;  
+  cout<<"\tKonversi Mata Uang"<<endl;  
+  cout<<"=============================================="<<endl; 
+  cout<<"1. Rupiah ke Dollar"<<endl;
+  cout<<"2. Dollar ke Rupiah"<<endl;
+  cout<<"=============================================="<<endl;
+  cout<<endl;
+  cout<<"Masukan pilihan Anda  : ";cin>>pilih;
+  cout<<endl;
+  cout<<"=============================================="<<endl;
+  
+  if (pilih==1)
+  {
+    cout<<"\n1. Rupiah ke Dollar"<<endl;
+    cout<<"----------------------------------------------"<<endl;
+    cout<<"Masukan nilai rupiah  : ";cin>>rupiah;
+    dollar = rupiah*15000;
+    cout<<"Nilai Dollar  : "<<dollar<<endl;
+   }
+  
+ 
+   else if(pilih==2)
+  {
+       cout<<"\n2. Dollar ke Rupiah"<<endl;
+    cout<<"Masukan nilai Dollar  : ";cin>>dollar;
+   Rupiah = dollar*0.00005;
+    cout<<"Nilai Rupiah  : "<<rupiah<<endl;
+   }
+   cout<<endl;
+   cout<<"=============================================="<<endl;
+   cout<<endl;
+}
