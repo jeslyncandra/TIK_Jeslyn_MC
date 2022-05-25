@@ -1,0 +1,78 @@
+#include <iostream>
+
+using namespace std;
+
+struct student {
+    string nama, indeks;
+    double tugas, pts, pas, hasil;
+};
+
+
+double nilaiakhir(int i, student siswa[]) { 
+    return (siswa[i].tugas * 0.2) + (siswa[i].pts * 0.3) + (siswa[i].pas * 0.4);
+}
+
+string nilaitertinggi(student siswa[], int jml) {
+    string ket;
+    int max = 0;
+    for (int i = 0; i < jml; i++) {
+        if (max < siswa[i].hasil) {
+            max = siswa[i].hasil;
+
+        }
+    }
+    return ket;
+}
+
+int main(){
+    const int jumlah_siswa = 2;
+    student siswa[jumlah_siswa];
+    int i;
+    double hasil;
+
+    //mengulang data siswa yang akan dihitung
+    i = 0;
+    do {
+    // for (i = 1; i <= 1; i++) {
+
+        // cout << "Masukkan berapa jumlah siswa: " << endl;
+        // cin >> jumlah_siswa;
+
+        cout << "Masukkan NAMA siswa ke-" << i+1 << endl;
+        cin >> siswa[i].nama;
+
+
+        cout << "Masukkan NILAI TUGAS dari " << siswa[i].nama << ": ";
+        cin >> siswa[i].tugas;
+        cout << endl;
+
+
+        cout << "Masukkan NILAI PTS dari " << siswa[i].nama << ": ";
+        cin >> siswa[i].pts;
+        cout << endl;
+
+        cout << "Masukkan NILAI PAS dari " << siswa[i].nama << ": ";
+        cin >> siswa[i].pas;
+        cout << endl;
+
+        cout << "-------------------------------------------------------------------------------" << endl;
+        cout << "NAMA" << "\t"  << "TUGAS" << "\t" << "PTS" << "\t" << "PAS" << "\t" << "NILAI AKHIR" << "\t" << endl;
+        cout << "-------------------------------------------------------------------------------" << endl;
+
+        // nilaiakhir(hasil, i);
+        siswa[i].hasil = nilaiakhir(i, siswa);
+        // hasil = (siswa[i].tugas * 0.4) + (siswa[i].pts * 0.3) + (siswa[i].pas * 0.3);
+
+        cout << siswa[i].nama << "\t" << siswa[i].tugas << "\t" << siswa[i].pts << "\t" << siswa[i].pas << "\t";
+        printf("%.2f ", siswa[i].hasil);
+
+        
+        cout << endl;
+
+        i = i + 1;
+    } while (i < jumlah_siswa);
+    // }
+
+
+    cout << endl;
+}
